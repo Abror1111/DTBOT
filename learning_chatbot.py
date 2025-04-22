@@ -307,76 +307,51 @@ def generate_sentence(conn, templates, keywords):
 
 # Javob generatsiya qilish
 def generate_response(conn, templates, user_input):
-    try:
-        # Noto'g'ri so'zlarni tuzatish
-        corrected_input = correct_input(user_input, conn)
-        user_input_lower = corrected_input.lower()
-        
-        # "Eslab qol" yoki "O'rgan" buyrug'i
-        if "eslab qol" in user_input_lower or "o'rgan" in user_input_lower:
-            words_to_learn = re.findall(r'\w+', user_input_lower)
-            for word in words_to_learn:
-                if word not in ["eslab", "qol", "o'rgan"]:
-                    learn_new_word(conn, word)
-            response = "Yangi so'zlar eslab qolindi!"
-            save_conversation(conn, user_input, response)
-            return response
-        
-        # Matn faylini o'rganish
-        if user_input_lower.startswith("matn o'rgan:"):
-            file_path = user_input_lower.split(":", 1)[1].strip()
-            response = process_text_file(file_path, conn)
-            save_conversation(conn, user_input, response)
-            return response
-        
-        # Grammatika so'rovlarni qayta ishlash
-        grammar_match = re.match(r'(\w+)\s+(kopluk|otgan|hozirgi|kelasi)(?:\s+(\w+))?', user_input_lower)
-        if grammar_match:
-            word, form_type, details = grammar_match.groups()
-            response = generate_grammar_form(conn, word, form_type, details)
-            save_conversation(conn, user_input, response)
-            return response
-        
-        # Gap generatsiyasi so'rovi
-        if "gap tuz" in user_input_lower:
-            keywords = re.findall(r'\w+', user_input_lower)
-            response = generate_sentence(conn, templates, keywords)
-            save_conversation(conn, user_input, response)
-            return response
-        
-        # Oddiy so'rov-javob
-        c = conn.cursor()
-        c.execute("SELECT response FROM responses WHERE pattern = ?", (user_input_lower,))
-        result = c.fetchone()
-        if result:
-            response = result[0]
-            save_conversation(conn, user_input, response)
-            return response
-        
-        words_input = re.findall(r'\w+', user_input_lower)
-        for word in words_input:
-            c.execute("SELECT pattern FROM patterns WHERE word = ?", (word,))
-            patterns = [row[0] for row in c.fetchall()]
-            for pattern in patterns:
-                c.execute("SELECT response FROM responses WHERE pattern = ?", (pattern,))
-                result = c.fetchone()
-                if result:
-                    response = result[0]
-                    save_conversation(conn, user_input, response)
-                    return response
-        
-        # Yangi so'zlarni avtomatik o'rganish
-        for word in words_input:
-            learn_new_word(conn, word)
-        
-        # Tasodifiy gap generatsiya qilish
-        response = generate_sentence(conn, templates, words_input)
+    corrected_input = correct_input(user_input, conn)
+    user_input_lower = corrected_input.lower()
+    # Suhbat tarixini saqlash
+    c = conn.cursor()
+    c.execute("SELECT user_input, response FROM conversation_history ORDER BY timestamp DESC LIMIT 1")
+    last_convo = c.fetchone()
+    context = last_convo[0] if last_convo else ""
+
+    # Matn o'rganish
+    if user_input_lower.startswith("matn o'rgan:"):
+        file_path = user_input_lower.split(":", 1)[1].strip()
+        response = process_text_file(file_path, conn)
         save_conversation(conn, user_input, response)
         return response
-    except Exception as e:
-        response = f"Xato: Javob generatsiyasida muammo: {str(e)}"
+
+    # Yangi so'z o'rganish
+    if "eslab qol" in user_input_lower or "o'rgan" in user_input_lower:
+        words_to_learn = re.findall(r'\w+', user_input_lower)
+        for word in words_to_learn:
+            if word not in ["eslab", "qol", "o'rgan"]:
+                learn_new_word(conn, word)
+        response = "Yangi so'zlar eslab qolindi!"
         save_conversation(conn, user_input, response)
         return response
+
+    # Shablon bo'yicha javob
+    for pattern, responses in INITIAL_MEMORY["responses"].items():
+        if any(p in user_input_lower for p in INITIAL_MEMORY["patterns"][pattern]):
+            response = responses
+            save_conversation(conn, user_input, response)
+            return response
+
+    # Kontekst asosida javob
+    if "nima" in user_input_lower and "bot" in context.lower():
+        response = "Men DTBOTman, sen bilan suhbatlashyapman! 😊"
+        save_conversation(conn, user_input, response)
+        return response
+
+    # Yangi so'zlarni o'rganish va gap tuzish
+    words_input = re.findall(r'\w+', user_input_lower)
+    for word in words_input:
+        learn_new_word(conn, word)
+    response = generate_sentence(conn, templates, words_input)
+    save_conversation(conn, user_input, response)
+    return response
 
 # Dastur to'xtatilganda ma'lumotlarni saqlash
 def signal_handler(sig, frame, conn):
