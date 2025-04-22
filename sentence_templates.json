@@ -1,0 +1,19 @@
+{
+  "sentence_templates": [
+    {
+      "structure": "Subyekt + Obyekt + Fel",
+      "example": "Men kitob o'qiyman",
+      "pattern": ["ot", "ot", "fel"]
+    },
+    {
+      "structure": "Subyekt + Fel",
+      "example": "Men yozaman",
+      "pattern": ["ot", "fel"]
+    },
+    {
+      "structure": "Obyekt + Fel",
+      "example": "Kitob yoziladi",
+      "pattern": ["ot", "fel"]
+    }
+  ]
+}
