@@ -24,6 +24,7 @@ INITIAL_MEMORY = {
         "nima": ["nima gap", "nima yangilik", "nima qilyapsan", "nima qilayapti bot"],
         "qalesan": ["qalesan", "qandaysan", "nima hol"],
         "isming": ["isming nima"],
+<<<<<<< HEAD
         "hayron": ["hayronman", "nima bu"],
         "yaxshi": ["yaxshisan", "yaxshi", "zo‘r"],
         "rahmat": ["rahmat", "tashakkur"],
@@ -32,14 +33,66 @@ INITIAL_MEMORY = {
     },
     "responses": {
         "salom": "Salom! Qanday yordam bera olaman?",
+=======
+        "qayerda": ["qayerdasan", "qayerdansan"],
+        "yosh": ["yoshing nechada"],
+        "bugun": ["bugun nima kun"],
+        "kun": ["bugun nima kun"],
+        "vaqt": ["hozir soat necha"],
+        "soat": ["hozir soat necha"],
+        "ob": ["ob-havo qanday"],
+        "havo": ["ob-havo qanday"],
+        "qanday": ["qandaysan", "ob-havo qanday"],
+        "shahar": ["qaysi shahar"],
+        "qaysi": ["qaysi shahar"],
+        "o'zbek": ["o'zbek tilida gaplashasanmi"],
+        "til": ["o'zbek tilida gaplashasanmi"],
+        "yordam": ["qanday yordam bera olasan"],
+        "xayr": ["xayr", "xayrli kun"]
+        "salom": ["salom", "assalomu alaykum"],
+        "nima": ["nima gap", "nima yangilik", "nima qilyapsan", "nima qilayapti bot"],
+        "qalesan": ["qalesan", "qandaysan", "nima hol"],
+        "isming": ["isming nima"],
+        "hayron": ["hayronman", "nima bu"],
+        "yaxshi": ["yaxshisan", "yaxshi", "zo‘r"],
+        "rahmat": ["rahmat", "tashakkur"]
+    },
+    "responses": {
+        "salom": "Salom! Qanday yordam bera olaman?",
+        "assalomu alaykum": "Va alaykum assalom! Qanday yordam kerak?",
+        "nima gap": "Hammasi zo'r! Senda nima gap?",
+        "nima yangilik": "Hech qanday yangilik yo'q, sen aytsang-chi!",
+        "nima qilyapsan": "Suhbatlashyapman, sen nima qilyapsan?",
+        "bugun nima kun": "Bugun dushanba! Yana nima bilmoqchisan?",
+        "yaxshimisiz": "Yaxshi, rahmat! Siz yaxshimisiz?",
+        "rahmat": "Arzimaydi!",
+        "qalesan": "Zo'r, sen qalesan?",
+        "qandaysan": "Yaxshi, sen qandaysan?",
+        "isming nima": "Men DTBOTman! 😊 Isming nima?",
+        "qayerdasan": "Men bulutlarda, sen qayerdasan? 😄",
+        "qayerdansan": "Men Toshkentdanman! Sen qayerdansan?",
+        "yoshing nechada": "Men abadiy yoshman! 😄 Senchi?",
+        "hozir soat necha": "Hozir vaqtni bilish uchun telefoningga qarasang-chi! 😜",
+        "ob-havo qanday": "Ob-havo haqida aniq bilmayman, lekin derazadan qarasang bo'ladi! 😊",
+        "qaysi shahar": "Men Toshkentni yaxshi ko'raman, sen qaysi shahardan?",
+        "o'zbek tilida gaplashasanmi": "Albatta, o'zbek tilida gaplashaman! Yana nima so'raymiz?",
+        "qanday yordam bera olasan": "Savollarga javob beraman, yangi narsalarni o'rganaman! Nima so'ramoqchisan?",
+        "xayr": "Xayr, yana ko'rishamiz!",
+        "xayrli kun": "Senga ham xayrli kun!"
+        "salom": "Salom! Qanday yordam bera olaman?",
+>>>>>>> 9f5a992769f72539af41c0a40bc8aaf0afe201d7
         "nima": "Hozir shu yerda sen bilan suhbatlashyapman! 😊 Senda nima gap?",
         "qalesan": "Yaxshi, sen qandaysan?",
         "isming": "Men DTBOTman! 😊 Isming nima?",
         "hayron": "Hayron bo‘lishga hojat yo‘q, hammasini tuzatamiz! 😊",
         "yaxshi": "Zo‘r, yaxshi kayfiyatda bo‘l! 😎",
+<<<<<<< HEAD
         "rahmat": "Arzimaydi, doim yordam beraman!",
         "nima qila olasan": "Men suhbatlashaman, xato so‘zlarni tuzataman, kod yozishni o‘rgataman va yangi so‘zlarni o‘rganaman! 😊 Masalan, 'kod yoz' yoki 'matn o'rgan: F:\\AI\\kitob.txt' deb so‘ra.",
         "kod": "Python kodini o‘rgataman yoki senga kod yozib beraman! 😊 Nima o‘rganmoqchisan? Masalan, 'print ni o‘rgat' yoki 'oddiy kalkulyator yoz' deb so‘ra."
+=======
+        "rahmat": "Arzimaydi, doim yordam beraman!"
+>>>>>>> 9f5a992769f72539af41c0a40bc8aaf0afe201d7
     }
 }
 
@@ -80,6 +133,7 @@ def load_templates():
         print(f"Xato: {TEMPLATES_FILE} faylini o'qishda muammo: {e}")
         return []
 
+<<<<<<< HEAD
 # Xato so'zlarni tuzatish
 analyzer = MorphAnalyzer()
 
@@ -89,6 +143,19 @@ def advanced_correct_word(word, conn):
     if analysis.get("root"):
         return analysis["root"]
     # Levenshtein bilan tuzatish
+=======
+# Noto'g'ri so'zlarni tuzatish
+from uznlp.morphology import MorphAnalyzer
+
+analyzer = MorphAnalyzer()
+
+def advanced_correct_word(word, conn):
+    # Birinchi uzNLP bilan so'z shaklini tahlil qilish
+    analysis = analyzer.analyze(word)
+    if analysis.get("root"):
+        return analysis["root"]
+    # Agar uzNLP topmasa, Levenshtein bilan tuzatish
+>>>>>>> 9f5a992769f72539af41c0a40bc8aaf0afe201d7
     c = conn.cursor()
     c.execute("SELECT word FROM words")
     known_words = [row[0] for row in c.fetchall()]
@@ -98,12 +165,27 @@ def advanced_correct_word(word, conn):
     corrected = word
     for known in known_words:
         dist = distance(word.lower(), known.lower())
+<<<<<<< HEAD
         if dist < min_distance and dist <= 3:
+=======
+        if dist < min_distance and dist <= 3:  # Masofa chegarasini kengaytirdik
+>>>>>>> 9f5a992769f72539af41c0a40bc8aaf0afe201d7
             min_distance = dist
             corrected = known
     return corrected
 
 def correct_input(user_input, conn):
+<<<<<<< HEAD
+=======
+    words = re.findall(r'\w+', user_input.lower())
+    corrected_words = [advanced_correct_word(w, conn) for w in words]
+    return ' '.join(corrected_words)
+
+def correct_input(user_input, conn):
+    c = conn.cursor()
+    c.execute("SELECT word FROM words")
+    known_words = [row[0] for row in c.fetchall()]
+>>>>>>> 9f5a992769f72539af41c0a40bc8aaf0afe201d7
     words = re.findall(r'\w+', user_input.lower())
     corrected_words = [advanced_correct_word(w, conn) for w in words]
     return ' '.join(corrected_words)
@@ -277,6 +359,7 @@ kor()  # Chiqish: 0: Dars qilish
 def generate_response(conn, templates, user_input):
     corrected_input = correct_input(user_input, conn)
     user_input_lower = corrected_input.lower()
+<<<<<<< HEAD
 
     # Kod o'rgatish yoki yozish
     code_response = teach_code(user_input, conn)
@@ -284,6 +367,9 @@ def generate_response(conn, templates, user_input):
         return code_response
 
     # Suhbat tarixi
+=======
+    # Suhbat tarixini saqlash
+>>>>>>> 9f5a992769f72539af41c0a40bc8aaf0afe201d7
     c = conn.cursor()
     c.execute("SELECT user_input, response FROM conversation_history ORDER BY timestamp DESC LIMIT 1")
     last_convo = c.fetchone()
@@ -293,6 +379,7 @@ def generate_response(conn, templates, user_input):
     if user_input_lower.startswith("matn o'rgan:"):
         file_path = user_input_lower.split(":", 1)[1].strip()
         response = process_text_file(file_path, conn)
+<<<<<<< HEAD
         save_conversation(conn, user_input, response)
         return response
 
@@ -316,6 +403,21 @@ def generate_response(conn, templates, user_input):
             save_conversation(conn, user_input, f"Yangi javob o'rgatildi: {pattern} → {response}")
             return f"Yangi javob o'rgatildi: {pattern} → {response}"
 
+=======
+        save_conversation(conn, user_input, response)
+        return response
+
+    # Yangi so'z o'rganish
+    if "eslab qol" in user_input_lower or "o'rgan" in user_input_lower:
+        words_to_learn = re.findall(r'\w+', user_input_lower)
+        for word in words_to_learn:
+            if word not in ["eslab", "qol", "o'rgan"]:
+                learn_new_word(conn, word)
+        response = "Yangi so'zlar eslab qolindi!"
+        save_conversation(conn, user_input, response)
+        return response
+
+>>>>>>> 9f5a992769f72539af41c0a40bc8aaf0afe201d7
     # Shablon bo'yicha javob
     for pattern, responses in INITIAL_MEMORY["responses"].items():
         if any(p in user_input_lower for p in INITIAL_MEMORY["patterns"][pattern]):
@@ -325,7 +427,11 @@ def generate_response(conn, templates, user_input):
 
     # Kontekst asosida javob
     if "nima" in user_input_lower and "bot" in context.lower():
+<<<<<<< HEAD
         response = "Men DTBOTman, sen bilan suhbatlashyapman va kod yozishni o‘rgatyapman! 😊"
+=======
+        response = "Men DTBOTman, sen bilan suhbatlashyapman! 😊"
+>>>>>>> 9f5a992769f72539af41c0a40bc8aaf0afe201d7
         save_conversation(conn, user_input, response)
         return response
 
@@ -337,7 +443,11 @@ def generate_response(conn, templates, user_input):
     save_conversation(conn, user_input, response)
     return response
 
+<<<<<<< HEAD
 # Signal handler
+=======
+# Dastur to'xtatilganda ma'lumotlarni saqlash
+>>>>>>> 9f5a992769f72539af41c0a40bc8aaf0afe201d7
 def signal_handler(sig, frame, conn):
     print("\nChatbot: Dastur to'xtatildi.")
     conn.close()
