@@ -41,6 +41,13 @@ INITIAL_MEMORY = {
         "til": ["o'zbek tilida gaplashasanmi"],
         "yordam": ["qanday yordam bera olasan"],
         "xayr": ["xayr", "xayrli kun"]
+        "salom": ["salom", "assalomu alaykum"],
+        "nima": ["nima gap", "nima yangilik", "nima qilyapsan", "nima qilayapti bot"],
+        "qalesan": ["qalesan", "qandaysan", "nima hol"],
+        "isming": ["isming nima"],
+        "hayron": ["hayronman", "nima bu"],
+        "yaxshi": ["yaxshisan", "yaxshi", "zo‘r"],
+        "rahmat": ["rahmat", "tashakkur"]
     },
     "responses": {
         "salom": "Salom! Qanday yordam bera olaman?",
@@ -64,6 +71,13 @@ INITIAL_MEMORY = {
         "qanday yordam bera olasan": "Savollarga javob beraman, yangi narsalarni o'rganaman! Nima so'ramoqchisan?",
         "xayr": "Xayr, yana ko'rishamiz!",
         "xayrli kun": "Senga ham xayrli kun!"
+        "salom": "Salom! Qanday yordam bera olaman?",
+        "nima": "Hozir shu yerda sen bilan suhbatlashyapman! 😊 Senda nima gap?",
+        "qalesan": "Yaxshi, sen qandaysan?",
+        "isming": "Men DTBOTman! 😊 Isming nima?",
+        "hayron": "Hayron bo‘lishga hojat yo‘q, hammasini tuzatamiz! 😊",
+        "yaxshi": "Zo‘r, yaxshi kayfiyatda bo‘l! 😎",
+        "rahmat": "Arzimaydi, doim yordam beraman!"
     }
 }
 
@@ -137,17 +151,34 @@ def load_templates():
         return []
 
 # Noto'g'ri so'zlarni tuzatish
-def correct_word(word, known_words):
+from uznlp.morphology import MorphAnalyzer
+
+analyzer = MorphAnalyzer()
+
+def advanced_correct_word(word, conn):
+    # Birinchi uzNLP bilan so'z shaklini tahlil qilish
+    analysis = analyzer.analyze(word)
+    if analysis.get("root"):
+        return analysis["root"]
+    # Agar uzNLP topmasa, Levenshtein bilan tuzatish
+    c = conn.cursor()
+    c.execute("SELECT word FROM words")
+    known_words = [row[0] for row in c.fetchall()]
     if not word or word in known_words:
         return word
     min_distance = float('inf')
     corrected = word
     for known in known_words:
         dist = distance(word.lower(), known.lower())
-        if dist < min_distance and dist <= 2:  # Maksimal 2 ta xato
+        if dist < min_distance and dist <= 3:  # Masofa chegarasini kengaytirdik
             min_distance = dist
             corrected = known
     return corrected
+
+def correct_input(user_input, conn):
+    words = re.findall(r'\w+', user_input.lower())
+    corrected_words = [advanced_correct_word(w, conn) for w in words]
+    return ' '.join(corrected_words)
 
 def correct_input(user_input, conn):
     c = conn.cursor()
