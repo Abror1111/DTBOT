@@ -1,0 +1,2 @@
+def ng():
+    return True

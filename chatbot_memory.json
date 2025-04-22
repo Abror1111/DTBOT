@@ -1,0 +1,127 @@
+{
+    "patterns": {
+        "salom": [
+            "salom",
+            "assalomu alaykum"
+        ],
+        "nima": [
+            "nima gap",
+            "nima yangilik",
+            "nima qilyapsan",
+            "bugun nima kun"
+        ],
+        "gap": [
+            "nima gap"
+        ],
+        "yaxshimisiz": [
+            "yaxshimisiz"
+        ],
+        "rahmat": [
+            "rahmat"
+        ],
+        "qalesan": [
+            "qalesan",
+            "qandaysan"
+        ],
+        "isming": [
+            "isming nima"
+        ],
+        "qayerda": [
+            "qayerdasan",
+            "qayerdansan"
+        ],
+        "yosh": [
+            "yoshing nechada"
+        ],
+        "bugun": [
+            "bugun nima kun"
+        ],
+        "kun": [
+            "bugun nima kun"
+        ],
+        "vaqt": [
+            "hozir soat necha"
+        ],
+        "soat": [
+            "hozir soat necha"
+        ],
+        "ob": [
+            "ob-havo qanday"
+        ],
+        "havo": [
+            "ob-havo qanday"
+        ],
+        "qanday": [
+            "qandaysan",
+            "ob-havo qanday"
+        ],
+        "shahar": [
+            "qaysi shahar"
+        ],
+        "qaysi": [
+            "qaysi shahar"
+        ],
+        "o'zbek": [
+            "o'zbek tilida gaplashasanmi"
+        ],
+        "til": [
+            "o'zbek tilida gaplashasanmi"
+        ],
+        "yordam": [
+            "qanday yordam bera olasan"
+        ],
+        "xayr": [
+            "xayr",
+            "xayrli kun"
+        ],
+        "test": [
+            "test"
+        ],
+        "ha": [
+            "ha"
+        ],
+        "o": [
+            "o'zinga keldinga"
+        ],
+        "zinga": [
+            "o'zinga keldinga"
+        ],
+        "keldinga": [
+            "o'zinga keldinga"
+        ],
+        "kitob": [
+            "kitob"
+        ],
+        "qalaysan": [
+            "qalaysan"
+        ]
+    },
+    "responses": {
+        "salom": "Salom! Qanday yordam bera olaman?",
+        "assalomu alaykum": "Va alaykum assalom! Qanday yordam kerak?",
+        "nima gap": "Hammasi zo'r! Senda nima gap?",
+        "nima yangilik": "Hech qanday yangilik yo'q, sen aytsang-chi!",
+        "nima qilyapsan": "Suhbatlashyapman, sen nima qilyapsan?",
+        "bugun nima kun": "Bugun dushanba! Yana nima bilmoqchisan?",
+        "yaxshimisiz": "Yaxshi, rahmat! Siz yaxshimisiz?",
+        "rahmat": "Arzimaydi!",
+        "qalesan": "Zo'r, sen qalesan?",
+        "qandaysan": "Yaxshi, sen qandaysan?",
+        "isming nima": "Men DTBOTman! ?? Isming nima?",
+        "qayerdasan": "Men bulutlarda, sen qayerdasan? ??",
+        "qayerdansan": "Men Toshkentdanman! Sen qayerdansan?",
+        "yoshing nechada": "Men abadiy yoshman! ?? Senchi?",
+        "hozir soat necha": "Hozir vaqtni bilish uchun telefoningga qarasang-chi! ??",
+        "ob-havo qanday": "Ob-havo haqida aniq bilmayman, lekin derazadan qarasang bo'ladi! ??",
+        "qaysi shahar": "Men Toshkentni yaxshi ko'raman, sen qaysi shahardan?",
+        "o'zbek tilida gaplashasanmi": "Albatta, o'zbek tilida gaplashaman! Yana nima so'raymiz?",
+        "qanday yordam bera olasan": "Savollarga javob beraman, yangi narsalarni o'rganaman! Nima so'ramoqchisan?",
+        "xayr": "Xayr, yana ko'rishamiz!",
+        "xayrli kun": "Senga ham xayrli kun!",
+        "test": "javob",
+        "ha": "nima",
+        "o'zinga keldinga": "Qayerda edim",
+        "kitob": "kitoblar",
+        "qalaysan": "Yahshi qanday yordam kerak"
+    }
+}

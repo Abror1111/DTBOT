@@ -1,0 +1,72 @@
+{
+  "nouns": {
+    "birlik": {
+      "kitob": {"unli": "qalin"},
+      "uy": {"unli": "qalin"},
+      "bola": {"unli": "ingichka"},
+      "kema": {"unli": "ingichka"}
+    },
+    "kopluk_rule": {
+      "qalin": "-lar",
+      "ingichka": "-lor"
+    }
+  },
+  "verbs": {
+    "yozmoq": {
+      "root": "yoz",
+      "forms": {
+        "otgan": {
+          "1s": "-dim",
+          "2s": "-ding",
+          "3s": "-di"
+        },
+        "hozirgi": {
+          "1s": "-ayapman",
+          "2s": "-ayapsan",
+          "3s": "-ayapti"
+        },
+        "kelasi": {
+          "1s": "-aman",
+          "2s": "-asan",
+          "3s": "-adi"
+        }
+      }
+    },
+    "o'qimoq": {
+      "root": "o'qi",
+      "forms": {
+        "otgan": {
+          "1s": "-dim",
+          "2s": "-ding",
+          "3s": "-di"
+        },
+        "hozirgi": {
+          "1s": "-ayapman",
+          "2s": "-ayapsan",
+          "3s": "-ayapti"
+        },
+        "kelasi": {
+          "1s": "-aman",
+          "2s": "-asan",
+          "3s": "-adi"
+        }
+      }
+    }
+  },
+  "word_formation": {
+    "ot_to_sifat": {
+      "suffix": "-iy",
+      "examples": {
+        "kitob": "kitobiy",
+        "uy": "uyiy"
+      }
+    },
+    "fel_to_ot": {
+      "suffix": "-uv",
+      "examples": {
+        "yozmoq": "yozuv",
+        "o'qimoq": "o'qiv"
+      }
+    }
+  }
+}

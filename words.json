@@ -1,0 +1,522 @@
+{
+    "words": [
+        {
+            "word": "kitob",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "kitoblar"
+        },
+        {
+            "word": "uy",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "uylar"
+        },
+        {
+            "word": "bola",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "bolalar"
+        },
+        {
+            "word": "yozmoq",
+            "type": "fel",
+            "root": "yoz",
+            "forms": {
+                "otgan": {
+                    "1s": "yozdim",
+                    "2s": "yozding",
+                    "3s": "yozdi"
+                },
+                "hozirgi": {
+                    "1s": "yozayapman",
+                    "2s": "yozayapsan",
+                    "3s": "yozayapti"
+                },
+                "kelasi": {
+                    "1s": "yozaman",
+                    "2s": "yozasan",
+                    "3s": "yozadi"
+                }
+            }
+        },
+        {
+            "word": "o'qimoq",
+            "type": "fel",
+            "root": "o'qi",
+            "forms": {
+                "otgan": {
+                    "1s": "o'qidim",
+                    "2s": "o'qiding",
+                    "3s": "o'qidi"
+                },
+                "hozirgi": {
+                    "1s": "o'qiayapman",
+                    "2s": "o'qiayapsan",
+                    "3s": "o'qiayapti"
+                },
+                "kelasi": {
+                    "1s": "o'qiyaman",
+                    "2s": "o'qiyasan",
+                    "3s": "o'qiyadi"
+                }
+            }
+        },
+        {
+            "word": "salom",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "salomlar"
+        },
+        {
+            "word": "ishlar",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "ishlarlar"
+        },
+        {
+            "word": "qalay",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "qalaylar"
+        },
+        {
+            "word": "matn",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "matnlar"
+        },
+        {
+            "word": "o",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "olar"
+        },
+        {
+            "word": "rgan",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "rganlar"
+        },
+        {
+            "word": "f",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "flar"
+        },
+        {
+            "word": "ai",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "ailar"
+        },
+        {
+            "word": "txt",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "txtlar"
+        },
+        {
+            "word": "zo",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "zolar"
+        },
+        {
+            "word": "r",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "rlar"
+        },
+        {
+            "word": "eslabqol",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "eslabqollar"
+        },
+        {
+            "word": "bo",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "bolar"
+        },
+        {
+            "word": "limining",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "limininglar"
+        },
+        {
+            "word": "ilmiy",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "ilmiylar"
+        },
+        {
+            "word": "metodika",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "metodikalar"
+        },
+        {
+            "word": "kengashi",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "kengashilar"
+        },
+        {
+            "word": "tomonidan",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "tomonidanlar"
+        },
+        {
+            "word": "nashrga",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "nashrgalar"
+        },
+        {
+            "word": "tavsiya",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "tavsiyalar"
+        },
+        {
+            "word": "etilgan",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "etilganlar"
+        },
+        {
+            "word": "va",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "valar"
+        },
+        {
+            "word": "imlosining",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "imlosininglar"
+        },
+        {
+            "word": "joriy",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "joriylar"
+        },
+        {
+            "word": "etillshl",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "etillshllar"
+        },
+        {
+            "word": "munosabati",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "munosabatilar"
+        },
+        {
+            "word": "bilan",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "bilanlar"
+        },
+        {
+            "word": "mazkur",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "mazkurlar"
+        },
+        {
+            "word": "yangi",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "yangilar"
+        },
+        {
+            "word": "igan",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "iganlar"
+        },
+        {
+            "word": "zaruriy",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "zaruriylar"
+        },
+        {
+            "word": "ehtiyoj",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "ehtiyojlar"
+        },
+        {
+            "word": "e",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "elar"
+        },
+        {
+            "word": "tiborga",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "tiborgalar"
+        },
+        {
+            "word": "olinib",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "oliniblar"
+        },
+        {
+            "word": "qo",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "qolar"
+        },
+        {
+            "word": "lingizdagi",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "lingizdagilar"
+        },
+        {
+            "word": "lianma",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "lianmalar"
+        },
+        {
+            "word": "yaratildi",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "yaratildilar"
+        },
+        {
+            "word": "ma",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "malar"
+        },
+        {
+            "word": "naviyatimiz",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "naviyatimizlar"
+        },
+        {
+            "word": "madaniyatimizning",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "madaniyatimizninglar"
+        },
+        {
+            "word": "zabardast",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "zabardastlar"
+        },
+        {
+            "word": "adiblari",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "adiblarilar"
+        },
+        {
+            "word": "yozuvchilari",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "yozuvchilarilar"
+        },
+        {
+            "word": "sholrlarlning",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "sholrlarlninglar"
+        },
+        {
+            "word": "tarjimayi",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "tarjimayilar"
+        },
+        {
+            "word": "holi",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "holilar"
+        },
+        {
+            "word": "adabiy",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "adabiylar"
+        },
+        {
+            "word": "ijodiy",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "ijodiylar"
+        },
+        {
+            "word": "yo",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "yolar"
+        },
+        {
+            "word": "li",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "lilar"
+        },
+        {
+            "word": "ta",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "talar"
+        },
+        {
+            "word": "lim",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "limlar"
+        },
+        {
+            "word": "tizimining",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "tizimininglar"
+        },
+        {
+            "word": "barcha",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "barchalar"
+        },
+        {
+            "word": "g",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "glar"
+        },
+        {
+            "word": "inlari",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "inlarilar"
+        },
+        {
+            "word": "uchun",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "uchunlar"
+        },
+        {
+            "word": "mo",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "molar"
+        },
+        {
+            "word": "ijallangan",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "ijallanganlar"
+        },
+        {
+            "word": "lib",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "liblar"
+        },
+        {
+            "word": "u",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "ular"
+        },
+        {
+            "word": "sizlarning",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "sizlarninglar"
+        },
+        {
+            "word": "talab",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "talablar"
+        },
+        {
+            "word": "ehtiyojlaringizni",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "ehtiyojlaringiznilar"
+        },
+        {
+            "word": "ium",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "iumlar"
+        },
+        {
+            "word": "darajada",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "darajadalar"
+        },
+        {
+            "word": "qondirishga",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "qondirishgalar"
+        },
+        {
+            "word": "xizmat",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "xizmatlar"
+        },
+        {
+            "word": "etadi",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "etadilar"
+        },
+        {
+            "word": "degafl",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "degafllar"
+        },
+        {
+            "word": "zbekiston",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "zbekistonlar"
+        },
+        {
+            "word": "respublikasi",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "respublikasilar"
+        },
+        {
+            "word": "xalq",
+            "type": "ot",
+            "unli": "qalin",
+            "kopluk": "xalqlar"
+        },
+        {
+            "word": "limi",
+            "type": "ot",
+            "unli": "ingichka",
+            "kopluk": "limilar"
+        }
+    ]
+}
